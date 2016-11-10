@@ -1,0 +1,18 @@
+
+    <div class="container text-center">
+      <div class="row">
+          <h1>Cocktails</h1>
+          <br>
+         <%= link_to 'Add a new cocktail', new_cocktail_path, class: "btn btn-primary"  %>
+          <ul>
+             <br>
+            <% @cocktails.each do |cocktail| %>
+            <li class="ingredients-list">
+              <p><%= link_to cocktail.name.capitalize, cocktail %> | <%= link_to 'Delete', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </li>
+            <% end %>
+          </ul>
+      </div>
+    </div>
+
+
