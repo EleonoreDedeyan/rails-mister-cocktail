@@ -1,5 +1,5 @@
 <%= simple_form_for (@cocktail) do |f| %>
-    <%= f.input :name %>
+    <%= f.input :name, label_html: { class: "white_form"} %>
 
     <%= f.submit "Create a new cocktail", class: "btn btn-primary" %>
     <%= link_to 'Go back', cocktails_path, class: "btn btn-primary" %>
